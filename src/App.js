@@ -5,10 +5,11 @@ import FooterPage from "./Components/Footer";
   
 function App() { 
   return ( 
-  
-   // Using the newly created Header  
-   // component in this main component 
-   <Headers/> 
+    <div>
+      <Headers/> 
+
+    </div>
+   
   ); 
 } 
 export default App;
