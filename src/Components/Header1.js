@@ -5,7 +5,7 @@ import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box"; 
 import Toolbar from "@mui/material/Toolbar"; 
 import Typography from "@mui/material/Typography"; 
-import Logo from './KrustyLogo1.png'; // Replace with the actual path to your logo image
+import Logo from './images/KrustyLogo1.png'; // Replace with the actual path to your logo image
 
 
 
@@ -33,7 +33,7 @@ export default function Headers(){
                     </Box>  
 
                     <Box sx = {{flexGrow:1 }}>
-                        <Typography variant = "h6" style={{textAlign:"right", fontFamily: 'Georgia', color: "black"}}> 718-244-5127</Typography>
+                        <Typography variant = "h6" style={{textAlign:"right", fontFamily: "'Purple Purse', 'serif'", color: "black"}}> 718-244-5127</Typography>
 
                     </Box> 
                 

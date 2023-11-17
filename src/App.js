@@ -6,7 +6,8 @@ import FooterPage from "./Components/Footer";
 function App() { 
   return ( 
     <div>
-      <Headers/> 
+      <Headers/>
+      <FooterPage/> 
 
     </div>
    

@@ -9,3 +9,22 @@
 .header-buttons{
     font-family: 'Courier New', Courier, monospace;
 }
+
+.midCol{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding-top: 20px;
+
+}
+
+.main-footer {
+    color: white;
+    background-color: #dc3545;
+    padding-top: 3em;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    
+  }
+
