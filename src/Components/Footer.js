@@ -50,8 +50,8 @@ function FooterPage() {
 
             <div>
               <Stack direction="column" spacing={2} style={{paddingLeft: "29%"}} >
-                <Button variant="contained" style= {{backgroundColor:"#DDA0DD", width: 150, fontFamily: 'Fira Sans', width: 10, height: 20, marginLeft: "20%"}} >HOME</Button>
-                <Button variant="contained" style= {{backgroundColor:"#DDA0DD", width: 150, fontFamily: 'Fira Sans', width: 10, height: 20,  marginLeft: "20%"}}>MENU</Button>
+                <Button variant="contained" href = "/Home"style= {{backgroundColor:"#DDA0DD", width: 150, fontFamily: 'Fira Sans', width: 10, height: 20, marginLeft: "20%"}} >HOME</Button>
+                <Button variant="contained" href = "/Menu"style= {{backgroundColor:"#DDA0DD", width: 150, fontFamily: 'Fira Sans', width: 10, height: 20,  marginLeft: "20%"}}>MENU</Button>
                 <Button variant="contained"style= {{backgroundColor:"#DDA0DD", width: 150, fontFamily: 'Fira Sans', width: 10, height: 20,  marginLeft: "20%"}}>ABOUT</Button>
                 <Button variant="contained"style= {{backgroundColor:"#DDA0DD", width: 150, fontFamily: 'Fira Sans', width: 10, height: 20,  marginLeft: "20%"}}>RESERVE</Button>
             </Stack>

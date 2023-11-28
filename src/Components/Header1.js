@@ -17,7 +17,7 @@ export default function Headers(){
             <hr width = "100%" size = "40" align = "center" color = "purple" ></hr>
 
             <AppBar position="sticky" style = {{backgroundColor: "white" , marginBottom: 0}}>  
-                <Toolbar style = {{height: "100px"}}> 
+                <Toolbar sx = {{p:1}}style = {{height: "100px"}}> 
                     <Box sx={{flexGrow:1 }}>
                         <img src={Logo} alt="Logo" style={{ height: 140, marginRight: 10, marginTop:10}} />                    </Box>
                     
@@ -28,7 +28,7 @@ export default function Headers(){
                         alignItems="center"
                         className = "header-buttons"
                     >
-                        <Button variant="contained"  style= {{backgroundColor:"#DDA0DD", marginRight:70, width: 150, fontFamily: 'Fira Sans'}} >HOME</Button>
+                        <Button variant="contained"  href = "/Home" style= {{backgroundColor:"#DDA0DD", marginRight:70, width: 150, fontFamily: 'Fira Sans'}} >HOME</Button>
                         <Button  variant="contained"  href="/Menu" style= {{backgroundColor:"#DDA0DD", marginRight:70, width: 150, fontFamily: 'Fira Sans'}}>MENU</Button>
                         <Button variant="contained"style= {{backgroundColor:"#DDA0DD", marginRight:70, width: 150, fontFamily: 'Fira Sans'}}>ABOUT</Button>
                         <Button variant="contained"style= {{backgroundColor:"#DDA0DD", marginRight:70, width: 150, fontFamily: 'Fira Sans'}}>RESERVE</Button>
