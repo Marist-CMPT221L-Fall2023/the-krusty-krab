@@ -5,6 +5,7 @@ import FooterPage from "./Components/Footer";
 import Menu from "./Screens/Menu/Menu"
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from  "./Screens/Homepage/Home"
+import Reservation from "./Screens/Reserve/Reservation";
   
 function App() { 
   return ( 
@@ -14,6 +15,9 @@ function App() {
          <Route exact path = "/" element={<Home />} />
          <Route path='/Menu' element={<Menu />} />
          <Route path = "/Home" element = {<Home/>}/>
+         <Route path = "/Reserve" element = {<Reservation/>}/>
+
+         
 
 
 

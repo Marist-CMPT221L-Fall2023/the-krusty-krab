@@ -31,7 +31,7 @@ export default function Headers(){
                         <Button variant="contained"  href = "/Home" style= {{backgroundColor:"#DDA0DD", marginRight:70, width: 150, fontFamily: 'Fira Sans'}} >HOME</Button>
                         <Button  variant="contained"  href="/Menu" style= {{backgroundColor:"#DDA0DD", marginRight:70, width: 150, fontFamily: 'Fira Sans'}}>MENU</Button>
                         <Button variant="contained"style= {{backgroundColor:"#DDA0DD", marginRight:70, width: 150, fontFamily: 'Fira Sans'}}>ABOUT</Button>
-                        <Button variant="contained"style= {{backgroundColor:"#DDA0DD", marginRight:70, width: 150, fontFamily: 'Fira Sans'}}>RESERVE</Button>
+                        <Button variant="contained" href="/Reserve" style= {{backgroundColor:"#DDA0DD", marginRight:70, width: 150, fontFamily: 'Fira Sans'}}>RESERVE</Button>
                     
                     </Box>  
 
