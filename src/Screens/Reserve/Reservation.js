@@ -1,5 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import './ReservationSystem.css';
+import Headers from "../../Components/Header1"; 
+import FooterPage from "../../Components/Footer";
+
 
 const ReservationSystem = () => {
   // Kai: Retrieve initial data from local storage or use default values
@@ -101,7 +104,10 @@ const ReservationSystem = () => {
 
   // Kai: JSX for the main component
   return (
-    <div className="reservation-system">
+    <div>
+      <Headers/>
+    
+      <div className="reservation-system">
       <h2>Krusty Krab Reservation System</h2>
       {generateDateTimeOptions()}
       {selectedDateTime.size > 0 && (
@@ -135,6 +141,10 @@ const ReservationSystem = () => {
         </div>
       )}
     </div>
+    <FooterPage/>
+
+    </div>
+    
   );
 };
 
