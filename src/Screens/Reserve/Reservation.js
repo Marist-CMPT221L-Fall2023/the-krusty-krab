@@ -108,7 +108,7 @@ const ReservationSystem = () => {
       <Headers/>
     
       <div className="reservation-system">
-      <h2>Krusty Krab Reservation System</h2>
+      <h2>Book a table!</h2>
       {generateDateTimeOptions()}
       {selectedDateTime.size > 0 && (
         <div className="reservation-details">
