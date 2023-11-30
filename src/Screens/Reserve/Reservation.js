@@ -1,20 +1,22 @@
+// src/ReservationSystem.js
 import React, { useState, useEffect } from 'react';
 import './ReservationSystem.css';
 import Headers from "../../Components/Header1"; 
 import FooterPage from "../../Components/Footer";
-
 
 const ReservationSystem = () => {
   // Kai: Retrieve initial data from local storage or use default values
   const initialSelectedDateTime = new Map(JSON.parse(localStorage.getItem('selectedDateTime')) || []);
   const initialReservationNames = new Map(JSON.parse(localStorage.getItem('reservationNames')) || []);
 
-  // Kai: States for managing reservation data and popup visibility
+  // Kai: States for managing reservation data, password, and popup visibility
   const [selectedDateTime, setSelectedDateTime] = useState(initialSelectedDateTime);
   const [reservationName, setReservationName] = useState('');
   const [reservationNames, setReservationNames] = useState(initialReservationNames);
   const [currentReservation, setCurrentReservation] = useState(null);
   const [showPopup, setShowPopup] = useState(false);
+  const [password, setPassword] = useState('');
+  const [passwordRequired, setPasswordRequired] = useState(false);
 
   // Kai: Save selectedDateTime and reservationNames to local storage whenever they change
   useEffect(() => {
@@ -22,18 +24,26 @@ const ReservationSystem = () => {
     localStorage.setItem('reservationNames', JSON.stringify(Array.from(reservationNames.entries())));
   }, [selectedDateTime, reservationNames]);
 
-  // Kai: Handle the click on a date and time option to make or cancel a reservation
+  // Kai: Handle the click on a date and time option to make, cancel, or remove a reservation
   const handleDateTimeClick = (date, time) => {
     const key = `${date}-${time}`;
     const newSelectedDateTime = new Map(selectedDateTime);
 
     if (newSelectedDateTime.has(key)) {
       // Kai: Reservation is already made, cancel it
+
+      // Kai: Remove the name associated with the canceled reservation
+      const newReservationNames = new Map(reservationNames);
+      newReservationNames.delete(key);
+      setReservationNames(newReservationNames);
+
       newSelectedDateTime.delete(key);
+      setPasswordRequired(true);
     } else {
       // Kai: Make a new reservation
       setCurrentReservation(key); // Set the current reservation being processed
       newSelectedDateTime.set(key, true);
+      setPasswordRequired(false);
     }
 
     setSelectedDateTime(newSelectedDateTime);
@@ -44,8 +54,19 @@ const ReservationSystem = () => {
     setReservationName(event.target.value);
   };
 
+  // Kai: Handle changes in the input field for the password
+  const handlePasswordChange = (event) => {
+    setPassword(event.target.value);
+  };
+
   // Kai: Handle the click on the "Enter" button to save the reservation and show the popup
   const handleEnterClick = () => {
+    if (currentReservation && passwordRequired && password !== '1234') {
+      // Kai: Password is required, and entered password is incorrect
+      alert('Incorrect password. Reservation not made.');
+      return;
+    }
+
     if (currentReservation) {
       // Kai: Make a new reservation using the current name
       const newSelectedDateTime = new Map(selectedDateTime);
@@ -57,9 +78,11 @@ const ReservationSystem = () => {
       newReservationNames.set(currentReservation, reservationName);
       setReservationNames(newReservationNames);
 
-      // Kai: Reset reservation name and current reservation
+      // Kai: Reset reservation name, current reservation, and password
       setReservationName('');
       setCurrentReservation(null);
+      setPassword('');
+      setPasswordRequired(false);
 
       // Kai: Show the popup
       setShowPopup(true);
@@ -85,11 +108,12 @@ const ReservationSystem = () => {
             const key = `${date}-${time}`;
             const isSelected = selectedDateTime.has(key);
             const reservationOwner = isSelected ? reservationNames.get(key) : null;
+            const isUnavailable = reservationOwner !== null;
 
             return (
               <div
                 key={key}
-                className={`time-option ${isSelected ? 'selected' : ''}`}
+                className={`time-option ${isSelected ? 'selected' : ''} ${isUnavailable ? 'unavailable' : ''}`}
                 onClick={() => handleDateTimeClick(date, time)}
               >
                 {time}
