@@ -1,4 +1,4 @@
-/* ReservationSystem.css */
+/* src/ReservationSystem.css */
 
 body {
     font-family: 'Arial', sans-serif;
@@ -9,6 +9,10 @@ body {
     align-items: center;
     justify-content: center;
     min-height: 100vh;
+  }
+
+  .app-container {
+    text-align: center;
   }
   
   .reservation-system {
@@ -22,42 +26,51 @@ body {
   
   h2 {
     color: #6a5acd; 
-    margin-bottom: 20px;
-    font-family: "Purple Purse', 'serif'";
+    margin-bottom: 20px; /* Lavender color */
+    font-family: "'Purple Purse', 'serif'";
   }
   
   .date-option {
-    margin-bottom: 30px; 
+    margin-bottom: 30px;  /* More space between date options */
   }
   
   h3 {
-    color: #6a5acd; 
+    color: #6a5acd;  /* Lavender color */
     margin-bottom: 10px;
   }
   
   .time-option {
-    background-color: #fff; 
-    border: 1px solid #6a5acd; 
+    background-color: #fff; /* White background */
+    border: 1px solid #6a5acd; /* Lavender border */
     border-radius: 4px;
-    color: #6a5acd; 
+    color: #6a5acd; /* Lavender text color */
     cursor: pointer;
     margin-right: 10px;
-    margin-bottom: 10px;
+    margin-bottom: 10px; /* More space between time options */
     padding: 10px;
     text-align: center;
     transition: background-color 0.3s ease, color 0.3s ease;
   }
   
   .time-option:hover {
-    background-color: #6a5acd; 
-    color: #fff;
+    background-color: #6a5acd; /* Lavender color on hover */
+    color: #fff; /* White text color on hover */
   }
   
   .selected {
-    background-color: #fff; 
-    color: #6a5acd; 
-    border-color: #6a5acd; 
+    background-color: #fff; /* White background for selected */
+    color: #6a5acd; /* Lavender text color for selected */
+    border-color: #6a5acd; /* Lavender border for selected */
   }
+
+  .unavailable {
+    background-color: #ccc; /* Light gray background for unavailable slots */
+    color: #666; /* Darker text color for unavailable slots */
+    cursor: not-allowed; /* Display not-allowed cursor for unavailable slots */
+  }
+  
+  
+  
   
   .reservation-owner {
     display: block;
@@ -96,7 +109,7 @@ body {
   }
   
   button:hover {
-    background-color: #483d8b; 
+    background-color: #483d8b; /*Darker lavender color on hover*/
   }
   
   .selected-times {
@@ -111,5 +124,24 @@ body {
   .selected-times li {
     margin-bottom: 10px;
     color: #333;
+  }
+
+  .popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .popup-content {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
   }
   
