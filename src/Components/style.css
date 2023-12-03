@@ -1,16 +1,14 @@
-
-
-.header{
+.header {
     height: 180px;
     position: relative;
     width: 100%;
 }
 
-.header-buttons{
+.header-buttons {
     font-family: 'Courier New', Courier, monospace;
 }
 
-.midCol{
+.midCol {
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -25,6 +23,5 @@
     position: relative;
     bottom: 0;
     width: 100%;
-    
-  }
 
+}
