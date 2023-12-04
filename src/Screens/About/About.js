@@ -24,7 +24,10 @@ const people = [
 
 export default function About() {
     return (
-        <div style={{ width: '100%', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+        
+        <div>
+
+            <div style={{ width: '100%', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
             <Headers />
             <h1 style={{ color: "#DDA0DD" }} >Our People</h1>
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '4rem' }} className="people-grid">
@@ -38,7 +41,21 @@ export default function About() {
                     </div>
                 ))}
             </div>
-            <FooterPage />
+
+            </div>
+            <hr width="100%" size="40" align="center" color="white" ></hr>
+
+        <FooterPage/>
         </div>
+
+
+
+
+
+
+
+
+
+
     )
 }
