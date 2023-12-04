@@ -1,5 +1,6 @@
 import React from "react";
 import Headers from "../../Components/Header1";
+import TopAbout1 from "../../Components/TopAbout";
 import FooterPage from "../../Components/Footer";
 import SpongeBob from "./SpongeBobImg.png";
 import MrKrabs from "./MrKrabsImg.png";
@@ -29,6 +30,7 @@ export default function About() {
 
             <div style={{ width: '100%', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
             <Headers />
+            <TopAbout1 />
             <h1 style={{ color: "#DDA0DD" }} >Our People</h1>
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '4rem' }} className="people-grid">
                 {people.map((person, index) => (

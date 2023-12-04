@@ -30,7 +30,7 @@ function FooterPage() {
 
           </div>
           <div style={{ fontFamily: "'DM Sans', 'sans-serif'", fontSize: 15, color: "black", marginTop: 20 }}>
-            24 Conch Street,<br />
+            124 Conch Street,<br />
             Bikini Bottom, Pacific Ocean 12345
 
 
