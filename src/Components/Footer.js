@@ -1,12 +1,9 @@
 import React from "react";
 import Button from "@mui/material/Button";
 import Stack from '@mui/material/Stack';
-import Container from '@mui/material/Container';
 import Grid from '@material-ui/core/Grid'
-import ButtonGroup from '@mui/material/ButtonGroup';
 import Box from '@mui/material/Box';
 import "./style.css";
-import Bootstrap from "react-bootstrap"
 import Krab from './images/TheKrustyKrab1.png'; // Replace with the actual path to your logo image
 import { GiHamburger } from "react-icons/gi";
 
@@ -53,8 +50,9 @@ function FooterPage() {
                 <Button variant="contained" href="/Home" style={{ backgroundColor: "#DDA0DD", width: 150, fontFamily: 'Fira Sans', width: 10, height: 20, marginLeft: "20%" }} >HOME</Button>
                 <Button variant="contained" href="/Menu" style={{ backgroundColor: "#DDA0DD", width: 150, fontFamily: 'Fira Sans', width: 10, height: 20, marginLeft: "20%" }}>MENU</Button>
                 <Button variant="contained" href="/About" style={{ backgroundColor: "#DDA0DD", width: 150, fontFamily: 'Fira Sans', width: 10, height: 20, marginLeft: "20%" }}>ABOUT</Button>
-                <Button variant="contained" style={{ backgroundColor: "#DDA0DD", width: 150, fontFamily: 'Fira Sans', width: 10, height: 20, marginLeft: "20%" }}>RESERVE</Button>
+                <Button variant="contained" href = "/Reserve" style={{ backgroundColor: "#DDA0DD", width: 150, fontFamily: 'Fira Sans', width: 10, height: 20, marginLeft: "20%" }}>RESERVE</Button>
               </Stack>
+
 
             </div>
 
