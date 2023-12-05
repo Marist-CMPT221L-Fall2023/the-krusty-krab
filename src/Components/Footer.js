@@ -6,6 +6,9 @@ import Box from '@mui/material/Box';
 import "./style.css";
 import Krab from './images/TheKrustyKrab1.png'; // Replace with the actual path to your logo image
 import { GiHamburger } from "react-icons/gi";
+import InstagramGreyLogo from './images/InstagramG.png';
+import FacebookGreyLogo from './images/FacebookG.png';
+import TwitterGreyLogo from './images/TwitterG.png';
 
 
 
@@ -32,10 +35,18 @@ function FooterPage() {
           <div style={{ fontFamily: "'DM Sans', 'sans-serif'", fontSize: 15, color: "black", marginTop: 20 }}>
             124 Conch Street,<br />
             Bikini Bottom, Pacific Ocean 12345
-
-
           </div>
-
+          <div style = {{marginTop: 10 , width: '80%', marginLeft: 50}}>
+            <a href="https://facebook.com/spongebob/" target="_blank" rel="noopener noreferrer">
+              <img src={FacebookGreyLogo} alt="Facebook Logo" style={{ maxWidth: '15%', cursor: 'pointer' }} />
+            </a>
+            <a href="https://twitter.com/spongebob" target="_blank" rel="noopener noreferrer">
+              <img src={TwitterGreyLogo} alt="Twitter Logo" style={{ maxWidth: '15%', cursor: 'pointer' }} />
+            </a>
+            <a href="https://instagram.com/spongebob" target="_blank" rel="noopener noreferrer">
+              <img src={InstagramGreyLogo} alt="Instagram Logo" style={{ maxWidth: '14%', cursor: 'pointer' }} />
+            </a>
+          </div>
 
 
         </Grid>

@@ -48,10 +48,7 @@ function TopAbout1() {
                 <div style={{ flex: 1 , display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
                     <img src = {Map} alt= "Map" style={{ maxWidth: '75%', marginRight: '100px'}} />
             </div>
-            </div>
-
-
-
+        </div>
     );
 };
 
