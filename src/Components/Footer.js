@@ -36,6 +36,7 @@ function FooterPage() {
             124 Conch Street,<br />
             Bikini Bottom, Pacific Ocean 12345
           </div>
+          
           <div style = {{marginTop: 10 , width: '80%', marginLeft: 50}}>
             <a href="https://facebook.com/spongebob/" target="_blank" rel="noopener noreferrer">
               <img src={FacebookGreyLogo} alt="Facebook Logo" style={{ maxWidth: '15%', cursor: 'pointer' }} />
